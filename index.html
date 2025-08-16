@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Instituto PROA — História, Propósito e Novidades</title>
+  <style>
+    :root{
+      --bg1:#0d3b66; --bg2:#1a5276; --card:#154a6b; --accent:#ffdd57; --text:#e9f4ff; --muted:#cfe6ff; --dark:#0b2037;
+    }
+    *{box-sizing:border-box; margin:0; padding:0}
+    body{font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color:var(--text); background:linear-gradient(135deg,var(--bg1),var(--bg2)); line-height:1.6}
+    a{color:var(--text)}
+
+    /* HERO */
+    header.hero{min-height:60vh; display:flex; align-items:center; justify-content:center; text-align:center; position:relative; overflow:hidden; padding:60px 20px}
+    header.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(to bottom,rgba(13,59,102,.55),rgba(26,82,118,.25));backdrop-filter:blur(1.5px)}
+    .hero__content{position:relative; z-index:2; max-width:1000px}
+    .hero h1{font-size:clamp(2rem,5vw,3.5rem); text-shadow:0 8px 40px rgba(0,0,0,.45)}
+    .hero p.lead{margin-top:14px; font-size:clamp(1rem,2.8vw,1.35rem); color:var(--muted)}
+
+    /* NAV */
+    nav{position:sticky; top:0; background:rgba(11,32,55,.7); backdrop-filter:blur(8px); z-index:50; border-bottom:1px solid rgba(255,255,255,.08)}
+    .nav__inner{max-width:1200px; margin:0 auto; display:flex; gap:14px; align-items:center; justify-content:space-between; padding:10px 16px}
+    .nav__links{display:flex; gap:10px; flex-wrap:wrap}
+    .pill{display:inline-block; padding:10px 14px; border-radius:999px; background:rgba(255,255,255,.08); color:var(--text); text-decoration:none; font-weight:600; transition:.25s}
+    .pill:hover{transform:translateY(-2px); background:rgba(255,255,255,.15)}
+
+    /* SECTIONS */
+    section{max-width:1100px; margin:50px auto; padding:0 20px}
+    h2{font-size:2rem; margin-bottom:12px; color:var(--accent)}
+    h3{font-size:1.25rem; margin:18px 0 8px}
+    p{color:var(--muted)}
+
+    .card{background:linear-gradient(145deg,#1a5276,#145374); border-radius:20px; padding:24px; box-shadow:0 12px 25px rgba(0,0,0,.28)}
+
+    /* Timeline */
+    .timeline{display:grid; gap:16px}
+    .tl__item{display:grid; grid-template-columns:120px 1fr; gap:16px; align-items:start; background:var(--card); border-radius:16px; padding:18px}
+    .tl__year{font-weight:800; font-size:1.1rem; color:#fff; background:#0d3b66; padding:10px 12px; border-radius:12px; text-align:center}
+
+    /* Grid */
+    .grid{display:grid; gap:20px}
+    @media(min-width:900px){.grid.cols-2{grid-template-columns:1fr 1fr}}
+
+    /* Callout */
+    .callout{border:2px dashed rgba(255,255,255,.25); padding:20px; border-radius:18px; background:rgba(255,255,255,.05)}
+
+    /* Footer */
+    footer{margin:60px auto 20px; text-align:center; color:var(--muted)}
+    .btn{display:inline-block; margin-top:14px; padding:12px 18px; background:#0d3b66; color:#fff; border:none; border-radius:12px; font-weight:700; text-decoration:none; box-shadow:0 8px 20px rgba(0,0,0,.25); transition:.25s}
+    .btn:hover{transform:translateY(-2px); background:#093255}
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="nav__inner">
+      <strong>Instituto PROA</strong>
+      <div class="nav__links">
+        <a class="pill" href="#historia">História</a>
+        <a class="pill" href="#missao">Propósito</a>
+        <a class="pill" href="#programas">Programas</a>
+        <a class="pill" href="#processo">Processo</a>
+        <a class="pill" href="#novidades">Novidades</a>
+        <a class="pill" href="#inclusao">Inclusão</a>
+      </div>
+      <a class="pill" href="index.html">⟵ Voltar para a Home</a>
+    </div>
+  </nav>
+
+  <header class="hero" style="background:url('proa/PROA.png') center/cover no-repeat">
+    <div class="hero__content">
+      <h1>A história do PROA — de um sonho coletivo a um movimento nacional</h1>
+      <p class="lead">Conheça a trajetória, os programas oficiais e as propostas que o nosso grupo quer implementar para ampliar o impacto.</p>
+    </div>
+  </header>
+
+  <section id="historia">
+    <h2>História (fatos verificados)</h2>
+    <div class="timeline">
+      <div class="tl__item">
+        <div class="tl__year">2007</div>
+        <div>
+          <p>Nasce o Instituto PROA, fundado por <strong>Susanna Lemann</strong>, <strong>Marcelo Barbará</strong> e <strong>Florian Bartunek</strong>, com o objetivo de inserir jovens de baixa renda, vindos da escola pública, no mercado de trabalho.</p>
+        </div>
+      </div>
+      <div class="tl__item">
+        <div class="tl__year">2008</div>
+        <div>
+          <p>Início das primeiras turmas em São Paulo e Rio de Janeiro, com cursos introdutórios e conteúdo focado em empregabilidade.</p>
+        </div>
+      </div>
+      <div class="tl__item">
+        <div class="tl__year">2021</div>
+        <div>
+          <p>Lançamento da <strong>Plataforma PROA</strong>, expansão on-line das formações para alcançar centenas de milhares de jovens no Brasil.</p>
+        </div>
+      </div>
+      <div class="tl__item">
+        <div class="tl__year">Hoje</div>
+        <div>
+          <p>O PROA atua em <strong>12 estados</strong> (SP, RJ, MG, SC, RS, PR, PE, BA, GO, DF, MS e PA) e já impactou <strong>+100 mil jovens</strong> com duas frentes principais: <em>PROPROFISSÃO</em> e <em>Plataforma PROA</em>.</p>
+        </div>
+      </div>
+    </div>
+    <p style="margin-top:12px" class="callout">Fonte oficial: site do PROA (seção “Quem somos” e “Linha do tempo”).</p>
+  </section>
+
+  <section id="missao" class="grid cols-2">
+    <div class="card">
+      <h2>Missão</h2>
+      <p>Promover a inserção de jovens de baixa renda e da rede pública no mercado de trabalho, por meio do desenvolvimento pessoal e profissional.</p>
+      <h3>Visão</h3>
+      <p>Transformar a realidade socioeconômica do Brasil por meio da empregabilidade jovem.</p>
+      <h3>Valores</h3>
+      <p>Ética, transparência, colaboração, diversidade e excelência.</p>
+    </div>
+    <div class="card">
+      <h2>Impacto</h2>
+      <ul>
+        <li>+100 mil jovens impactados;</li>
+        <li>Atuação em 12 estados;</li>
+        <li>Parcerias com o poder público e empresas para acelerar o 1º emprego.</li>
+      </ul>
+      <a class="btn" href="#programas">Conhecer os programas</a>
+    </div>
+  </section>
+
+  <section id="programas">
+    <h2>Programas oficiais</h2>
+    <div class="grid cols-2">
+      <div class="card">
+        <h3>Plataforma PROA (on-line e gratuita)</h3>
+        <p>Carga horária de referência: <strong>~100 horas</strong>. Módulos: <em>Autoconhecimento</em>, <em>Projeto Profissional</em>, <em>Raciocínio Lógico</em> e <em>Comunicação</em>. Ao longo da jornada, há <strong>encontros ao vivo semanais</strong> com tutores.</p>
+        <p class="callout">Processo de entrada: inscrição + teste básico (Língua Portuguesa, Matemática/Raciocínio Lógico e/ou perfil). Vagas distribuídas por estado.</p>
+      </div>
+      <div class="card">
+        <h3>PROPROFISSÃO (imersão presencial)</h3>
+        <p>Formação técnica intensiva em <strong>Programação e Desenvolvimento de Sistemas</strong>, unindo <em>núcleo técnico</em> e <em>núcleo comportamental</em>. Duração típica: <strong>~6 meses</strong> (referência pública de ~440h em trilhas parceiras) com projetos, vivências corporativas e preparação para o primeiro emprego.</p>
+        <p class="callout">Desafios práticos fazem parte da cultura (ex.: “DesafioTech” em edições anteriores).</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="processo">
+    <h2>Como funciona o processo (resumo)</h2>
+    <div class="card">
+      <ol>
+        <li><strong>Inscrição on-line</strong> no site do PROA.</li>
+        <li><strong>Teste de seleção</strong> com conteúdos básicos (Língua Portuguesa e Raciocínio Lógico/Matemática) e, em alguns editais, <strong>análise de perfil</strong>.</li>
+        <li><strong>Matrícula</strong> para candidatos aprovados e confirmação da turma.</li>
+        <li><strong>Jornada formativa</strong> com módulos, encontros ao vivo e atividades práticas (ex.: simulação de entrevista, currículo, LinkedIn, projetos em equipe).</li>
+        <li><strong>Conexão com vagas</strong> por meio da rede de empregabilidade do PROA.</li>
+      </ol>
+    </div>
+  </section>
+
+  <section id="novidades">
+    <h2>Agora estamos com novidades</h2>
+    <p class="lead">Além do programa para baixa renda, estamos propondo duas novas frentes para ampliar o acesso e a diversidade de perfis.</p>
+
+    <div class="grid cols-2">
+      <div class="card">
+        <h3>PROA Launch — foco em baixa renda (oficial)</h3>
+        <p>Segue os critérios socioeconômicos e educacionais atuais do PROA, garantindo prioridade para jovens da escola pública. Mantém módulos, mentorias e conexão com empregadores.</p>
+      </div>
+      <div class="card">
+        <h3>PROA Conquista — modalidade paga (proposta do grupo)</h3>
+        <p>Para pessoas com <strong>renda familiar acima de 2 salários mínimos</strong> ou que estudaram em escola particular. Valor simbólico revertido integralmente para <strong>bolsas e melhorias</strong> do programa. Mesma carga formativa essencial + <em>conteúdos bônus</em> financiados pela própria turma.</p>
+      </div>
+    </div>
+
+    <div class="grid cols-2" style="margin-top:20px">
+      <div class="card">
+        <h3>PROA Restart — 28 a 50 anos (proposta do grupo)</h3>
+        <p>Trilha intensiva de <strong>6 meses</strong> para <em>transição de carreira</em>, com foco em tecnologia e empregabilidade. Inclui projetos práticos, laboratório de portfólio e preparação para entrevistas técnicas.</p>
+      </div>
+      <div class="card">
+        <h3>Recursos extras que queremos implementar</h3>
+        <ul>
+          <li><strong>Mentorias com psicólogo</strong> (apoio socioemocional estruturado);</li>
+          <li><strong>Palestras com empresas parceiras</strong> e feiras de contratação;</li>
+          <li><strong>Desafios temáticos</strong> (hackathons, cases reais com feedback de recrutadores);
+          </li>
+          <li><strong>Clube de estudos</strong> e <em>plantões on-line</em> semanais;</li>
+          <li><strong>Trilha técnica opcional</strong> por carreira (p. ex.: dados, front-end, cloud) como 5º módulo;</li>
+          <li><strong>Rede de ex-alunos</strong> com mentoria de carreira por 3 anos.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="inclusao">
+    <h2>Compromisso com a inclusão</h2>
+    <div class="card">
+      <p>
+        O PROA é e seguirá sendo <strong>inclusivo para todas as raças, etnias, gêneros e sexualidades</strong>. Nossas propostas reforçam a prioridade ao público de baixa renda e, ao mesmo tempo, 
+        <em>abrem portas</em> para perfis que hoje estão fora do recorte socioeconômico, sem perder a missão social: ampliar o número de jovens inseridos no mercado com qualidade e respeito à diversidade.
+      </p>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 — Página criada pelo nosso grupo para apresentação do Instituto PROA. Esta página combina <em>fatos oficiais</em> com <em>propostas</em> sinalizadas.</p>
+  </footer>
+</body>
+</html>

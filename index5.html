@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PROA - Transformando Vidas</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        body { background: linear-gradient(135deg, #0d3b66, #1a5276); color: #fff; padding: 20px; min-height: 100vh; }
+        header { text-align: center; margin-bottom: 40px; position: relative; }
+        header img.logo { width: 150px; margin-bottom: 20px; }
+        header img.decor { width: 80px; position: absolute; top: 20px; right: 20px; border-radius: 10px; }
+        header h1 { font-size: 2.5rem; margin-bottom: 10px; color: #f0f8ff; }
+        header p { font-size: 1.2rem; color: #cce7ff; }
+        .cards { display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; max-width: 1200px; margin-bottom: 50px; }
+        .card { background: linear-gradient(145deg, #1a5276, #145374); border-radius: 20px; padding: 25px; width: 300px; transition: transform 0.3s, box-shadow 0.3s; cursor: pointer; box-shadow: 0 10px 20px rgba(0,0,0,0.3); }
+        .card:hover { transform: translateY(-10px); box-shadow: 0 20px 30px rgba(0,0,0,0.5); }
+        .card img { width: 100%; height: 200px; object-fit: cover; border-radius: 15px; margin-bottom: 15px; }
+        .card h2 { font-size: 1.8rem; margin-bottom: 15px; color: #f0f8ff; }
+        .card p { font-size: 1rem; line-height: 1.6; color: #d0e6ff; }
+        .card button { margin-top: 15px; padding: 10px 20px; background-color: #0d3b66; border: none; border-radius: 10px; color: #fff; font-weight: bold; cursor: pointer; transition: background-color 0.3s; }
+        .card button:hover { background-color: #06355a; }
+        .section { display: none; padding: 40px; background-color: #145374; border-radius: 20px; margin-bottom: 40px; max-width: 900px; margin-left: auto; margin-right: auto; }
+        .section.active { display: block; animation: fadeIn 0.5s; }
+        .section h2 { color: #ffdd57; margin-bottom: 20px; text-align: center; }
+        .section p, .section ul { color: #d0e6ff; margin-bottom: 20px; }
+        ul { margin-left: 20px; }
+        li { margin-bottom: 10px; }
+        .section a { display: inline-block; margin-top: 20px; padding: 10px 25px; background-color: #0d3b66; color: #fff; text-decoration: none; border-radius: 10px; font-weight: bold; transition: background-color 0.3s; }
+        .section a:hover { background-color: #06355a; }
+        .highlight { color: #ffdd57; font-weight: bold; }
+        footer { text-align: center; margin-top: 50px; color: #d0e6ff; }
+        @keyframes fadeIn { from {opacity: 0;} to {opacity: 1;} }
+        @media(max-width: 960px) { .cards { flex-direction: column; align-items: center; } }
+    </style>
+</head>
+<body>
+    <header>
+        <!-- Logo principal -->
+        <img src="instituto.proa.jpg" alt="Logo PROA" class="logo">
+        <h1>PROA - Transformando Vidas</h1>
+        <p>Escolha a versão do PROA que combina com você e descubra como podemos impulsionar sua trajetória!</p>
+
+        <!-- Imagem menor decorativa -->
+        <img src="OIP.jpg" alt="Decoração" class="decor">
+    </header>
+
+    <main class="cards">
+        <div class="card">
+            <img src="PROA_1.png" alt="Proa Launch">
+            <h2>Proa Launch</h2>
+            <p>Focado em jovens de baixa renda, oferecendo oportunidades de aprendizado e crescimento.</p>
+            <button onclick="showSection('launch')">Saiba Mais</button>
+        </div>
+
+        <div class="card">
+            <img src="PROA_9.webp" alt="Proa Conquista">
+            <h2>Proa Conquista</h2>
+            <p>Programa pago para quem deseja investir em seu desenvolvimento e conquistar novos patamares.</p>
+            <button onclick="showSection('conquista')">Saiba Mais</button>
+        </div>
+
+        <div class="card">
+            <img src="PROA_11.webp" alt="Proa Restart">
+            <h2>Proa Restart</h2>
+            <p>Para pessoas entre 28 e 50 anos que desejam recomeçar sua carreira em um intensivo de 6 meses.</p>
+            <button onclick="showSection('restart')">Saiba Mais</button>
+        </div>
+    </main>
+
+    <!-- Seções detalhadas -->
+    <div id="launch" class="section">
+        <h2>Proa Launch - Oportunidade para Jovens de Baixa Renda</h2>
+        <p>Se você é um jovem de baixa renda e se encaixa nos critérios abaixo, venha fazer parte do <span class="highlight">Projeto Proa</span>:</p>
+        <ul>
+            <li>Renda familiar de até <span class="highlight">2 salários mínimos</span>;</li>
+            <li>Veio de escola pública ou bolsista integral em escola particular;</li>
+            <li>Deseja desenvolver habilidades em tecnologia e crescimento pessoal.</li>
+        </ul>
+        <p>O <span class="highlight">Proa Launch</span> oferece:</p>
+        <ul>
+            <li>Desenvolvimento de pessoas, preparando para os desafios do mercado de trabalho;</li>
+            <li>Mentoria de 3 anos, com acompanhamento próximo;</li>
+            <li>Capacitação em tecnologia e habilidades essenciais;</li>
+            <li>Suporte contínuo para crescimento profissional e pessoal;</li>
+            <li>Participação em projetos práticos e oportunidades reais de mercado.</li>
+        </ul>
+        <a href="#top" onclick="closeSection('launch')">Fechar</a>
+    </div>
+
+    <div id="conquista" class="section">
+        <h2>Proa Conquista - Invista no Seu Futuro</h2>
+        <p>Se você não se encaixa nos critérios de renda ou veio de escola particular, não desanime! O <span class="highlight">Proa Conquista</span> oferece um programa pago com valor simbólico, totalmente revertido em melhorias do projeto.</p>
+        <ul>
+            <li>Investimento em tecnologia, ferramentas e conteúdos exclusivos;</li>
+            <li>Melhorias no PROA e divulgação para ampliar impacto;</li>
+            <li>Garantia de experiência completa e recursos de qualidade.</li>
+        </ul>
+        <p>O programa também oferece:</p>
+        <ul>
+            <li>Capacitação completa em tecnologia e habilidades essenciais;</li>
+            <li>Mentorias e acompanhamento contínuo;</li>
+            <li>Projetos reais para aplicar conhecimento;</li>
+            <li>Networking e oportunidades exclusivas;</li>
+            <li>Desenvolvimento de soft skills e liderança.</li>
+        </ul>
+        <a href="#top" onclick="closeSection('conquista')">Fechar</a>
+    </div>
+
+    <div id="restart" class="section">
+        <h2>Proa Restart - Recomece sua Carreira</h2>
+        <p>Se você tem entre <span class="highlight">28 e 50 anos</span> e está com medo ou dúvidas sobre sua carreira, venha para o <span class="highlight">Proa Restart</span> e comece do zero em uma nova profissão.</p>
+        <ul>
+            <li>Intensivo de 6 meses, focado em aprendizado rápido e aplicável;</li>
+            <li>Experiência prática real e mentoria individual;</li>
+            <li>Capacitação em tecnologias e habilidades modernas;</li>
+            <li>Suporte para reinserção no mercado de trabalho;</li>
+            <li>Networking com empresas parceiras e oportunidades exclusivas;</li>
+            <li>Desenvolvimento de soft skills, liderança e comunicação;</li>
+            <li>Mentorias e acompanhamento contínuo para garantir evolução profissional.</li>
+        </ul>
+        <a href="#top" onclick="closeSection('restart')">Fechar</a>
+    </div>
+
+    <footer>
+        © 2025 PROA - Todos os direitos reservados.
+    </footer>
+
+    <script>
+        function showSection(id) {
+            const sections = document.querySelectorAll('.section');
+            sections.forEach(sec => sec.classList.remove('active'));
+            document.getElementById(id).classList.add('active');
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+        function closeSection(id) {
+            document.getElementById(id).classList.remove('active');
+        }
+    </script>
+</body>
+</html>
